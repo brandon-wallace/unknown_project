@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'FjallaOne-Regular';
+  src: url('../fonts/FjallaOne-Regular.eot'); 
+  src: url('../fonts/FjallaOne-Regular.woff2') format('woff2'), 
+       url('../fonts/FjallaOne-Regular.woff') format('woff'), 
+       url('../fonts/FjallaOne-Regular.ttf')  format('truetype'), 
+       url('../fonts/FjallaOne-Regular.otf')  format('opentype') 
+}
+
 html,
 body {
     width: 100%;
@@ -5,11 +14,17 @@ body {
 
 body {
     margin: 0;
-    font-family: monospace, monospace;
+    display: flex;
+    font-size: 100%;
+    line-height: 1.75;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'FjallaOne-Regular', monospace;
 }
 
 main {
     width: 100%;
+    margin: 0 auto;
 }
 
 main,
@@ -46,16 +61,18 @@ input[type="password"] {
     display: block;
     margin-bottom: 1.5em;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 .bttn {
     width: 100%;
     height: 45px;
+    color: #0101EE;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #0101EE;
     border-radius: 4px;
     letter-spacing: 2px;
+    font-family: inherit;
     text-transform: uppercase;
     border: 4px solid #0101EE;
 }
@@ -63,4 +80,17 @@ input[type="password"] {
 .bttn:hover {
     color: #FFFFFF;
     background-color: #0101EE;
+}
+
+footer {
+    margin-top: auto;
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        background: url('../images/pexels-aidan-nguyen-3639003.jpg');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+    }
 }
