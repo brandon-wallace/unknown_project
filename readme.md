@@ -1,5 +1,7 @@
 # Nodejs, Express, Mongo, Passportjs
 
+![screenshot1](public/images/screenshot1.png)
+
 ```
 ├── application.js
 ├── authentication
@@ -27,3 +29,7 @@
     ├── profile.pug
     └── signup.pug
 ```
+
+
+Background image by [Aidan Nguyen](https://www.pexels.com/@aidan-nguyen-798328) from Pexels
+
