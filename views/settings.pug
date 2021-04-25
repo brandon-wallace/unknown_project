@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 Settings Page
+
+    form(action="/profile/settings" method='POST')
+
+        label(for='email_address') Email Address
+        input(type='text' name='email_address' id='email_address' value='' placeholder='Enter email' required)
+
+        label(for='password') Current Password
+        input(type='password' name='password' id='password' value='' placeholder='Enter current password' required)
+
+        label(for='new_password') Update Password
+        input(type='password' name='new_password' id='new_password' value='' placeholder='New password' required)
+
+        label(for='confirm_password') Re-Enter Password
+        input(type='password' name='confirm_password' id='confirm_password' value='' placeholder='Confirm password' required)
+
+        button(class='bttn bttn--blue' type='submit') UPDATE PASSWORD
+        span.form__cancel__bttn
+            a(href="/profile/settings") CANCEL

@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    h1 Add Recipe
+
+    form(action="/users/recipe" method='POST' enctype='multipart/form-data')
+
+        label(for='recipe_title') Recipe Title
+        input(type='text' name='recipe_title' id='recipe_title' value='' placeholder='Recipe title' required)
+
+        input(type='file' accept='image/jpeg')
+        p(class='form__upload__text') Reccomended size: 1200 x 628
+        button(class='bttn' type='submit') UPLOAD
+
+        label(for='description') Description
+        textarea(name='description' id='description' value='' placeholder='Enter a description (optional)')
+
+        label(for='directions') Directions
+        textarea(name='directions' id='directions' value='' placeholder='Enter directions:' required)
+
+        label(for='ingredients') Ingredients
+        textarea(name='ingredients' id='ingredients' value='' placeholder='Add one ingredient per line.' required)
+
+        label(for='prep_time') Preparation time
+        input(type='number' id='prep_time' value='' placeholder='0' required)
+
+        label(for='cook_time') Cook time
+        input(type='number' id='cook_time' value='' placeholder='0' required)
+
+        label(for='servings') Cook time
+        input(type='number' id='servings' value='' placeholder='1' required)
+
+        button(class='bttn bttn--blue' type='submit') SAVE RECIPE
+        span.form__cancel__bttn
+            a(href="/profile/recipe") CANCEL
