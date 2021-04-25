@@ -2,23 +2,18 @@ const express = require('express')
 const router = express.Router()
 
 
-router.get('/', (request, response) => {
-    response.render('index');
-});
-
-
 router.get('/profile', (request, response) => {
     response.render('profile');
 });
 
 
-router.get('/signup', (request, response) => {
-    response.render('signup');
+router.get('/recipe', (request, response) => {
+    response.render('recipe');
 });
 
 
-router.get('/login', (request, response) => {
-    response.render('login');
+router.get('/settings', (request, response) => {
+    response.render('settings');
 });
 
 
