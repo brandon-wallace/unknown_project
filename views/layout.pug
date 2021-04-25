@@ -13,14 +13,18 @@ html(lang="en")
                         a(href="/").menu__link home
                     if isAuthenticated
                         li.menu__item
-                            a(href="/users/profile").menu__link profile
+                            a(href="/profile/recipe").menu__link add recipe
+                        li.menu__item
+                            a(href="/profile/profile").menu__link profile
+                        li.menu__item
+                            a(href="/profile/settings").menu__link settings
                         li.menu__item
                             a(href="/users/logout").menu__link logout
                     else
                         li.menu__item
                             a(href="/users/login").menu__link login
                         li.menu__item
-                            a(href="/signup").menu__link signup
+                            a(href="/users/signup").menu__link signup
         main
             if success
                 for msg in success

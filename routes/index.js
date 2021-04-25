@@ -8,8 +8,8 @@ router.get('/', (request, response) => {
 });
 
 
-router.get('/profile', ensureAuthenticated, (request, response) => {
-    response.render('profile', {user: request.user});
+router.get('/login', (request, response) => {
+    response.render('login');
 });
 
 

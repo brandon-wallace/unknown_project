@@ -50,5 +50,6 @@ app.use('/', require('./routes/index'));
 
 app.use('/users', require('./routes/users'));
 
+app.use('/profile', require('./routes/profile'));
 
 app.listen(3000);
