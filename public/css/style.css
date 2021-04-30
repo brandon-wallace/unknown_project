@@ -172,6 +172,9 @@ footer {
     body {
         background: linear-gradient(to right, #FFFFFF 50%, #0101EE 51%, #0101EE 100%);
     }
+    main {
+        max-width: 50%;
+    }
     h1 {
         max-width: 500px;
     }
