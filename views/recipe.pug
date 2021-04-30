@@ -6,11 +6,11 @@ block content
     form(action="/users/recipe" method='POST' enctype='multipart/form-data')
 
         label(for='recipe_title') Recipe Title
-        input(type='text' name='recipe_title' id='recipe_title' value='' placeholder='Recipe title' required)
+        input(type='text' name='recipe_title' id='recipe_title' value='' placeholder='Enter title' required)
 
-        input(type='file' accept='image/jpeg')
+        label(for='form__upload') 
+            input(id='form__upload' class='form__upload__bttn' type='file' accept='image/jpeg')
         p(class='form__upload__text') Reccomended size: 1200 x 628
-        button(class='bttn' type='submit') UPLOAD
 
         label(for='description') Description
         textarea(name='description' id='description' value='' placeholder='Enter a description (optional)')
