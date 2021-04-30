@@ -2,34 +2,47 @@
 
 ![screenshot1](public/images/screenshot1.png)
 
+![screenshot2](public/images/screenshot2.png)
+
 ```
-├── application.js
-├── authentication
+
+├── authentication/
 │   ├── authentication.js
 │   ├── notauthenticated.js
 │   └── passport.js
-├── LICENSE
-├── models
+├── models/
 │   └── user.js
-├── public
-│   ├── css
+├── public/
+│   ├── css/
 │   │   └── style.css
-│   ├── favicon.ico
-│   └── js
-│       └── script.js
-├── readme.md
-├── routes
+│   ├── fonts/
+│   │   ├── FjallaOne-Regular.eot
+│   │   ├── FjallaOne-Regular.otf
+│   │   ├── FjallaOne-Regular.ttf
+│   │   ├── FjallaOne-Regular.woff
+│   │   └── FjallaOne-Regular.woff2
+│   ├── images/
+│   │   ├── polka-dots-938427_1280_wave.jpg
+│   │   └── screenshot1.png
+│   ├── js/
+│   │   └── script.js
+│   └── favicon.ico
+├── routes/
 │   ├── index.js
 │   ├── profile.js
 │   └── users.js
-└── views
-    ├── index.pug
-    ├── layout.pug
-    ├── login.pug
-    ├── profile.pug
-    └── signup.pug
+├── views/
+│   ├── index.pug
+│   ├── layout.pug
+│   ├── login.pug
+│   ├── profile.pug
+│   ├── recipe.pug
+│   ├── settings.pug
+│   └── signup.pug
+├── application.js
+├── LICENSE
+├── package.json
+├── package-lock.json
+└── readme.md
+
 ```
-
-
-Background image by [Aidan Nguyen](https://www.pexels.com/@aidan-nguyen-798328) from Pexels
-
