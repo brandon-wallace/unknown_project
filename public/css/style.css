@@ -165,8 +165,20 @@ textarea {
 }
 
 footer {
+    display: flex;
     margin-top: auto;
+    min-height: 300px;
+    align-items: flex-end;
+    background-color: #EEEEEE;
+    background: linear-gradient(to top, #EEEEEE 0%, #EEEEEE 95%, #FFFFFF 100%);
 }
+
+.footer__text {
+    margin: 0 0 2rem 0;
+    writing-mode: vertical-rl;
+}
+
+.footer__link {}
 
 @media only screen and (min-width: 875px) {
     body {
