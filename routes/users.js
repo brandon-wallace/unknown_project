@@ -11,17 +11,17 @@ router.get('/login', checkNotAuthenticated, (request, response) => {
 });
 
 
-router.get('/signup', (request, response) => {
-    response.render('signup');
-});
-
-
 router.post('/login', (request, response, next) => {
     passport.authenticate('local', {
         successRedirect: '/profile/profile',
         failureRedirect: '/users/login',
         failureFlash: true
     })(request, response, next);
+});
+
+
+router.get('/signup', (request, response) => {
+    response.render('signup');
 });
 
 
