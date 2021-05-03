@@ -30,17 +30,14 @@ router.post('/signup', (request, response) => {
     let errors = [];
 
     if (password !== confirm_password) {
-        console.log('No match');
         errors.push({message: 'Passwords do not match.'});
     }
 
     if (password.length < 3) {
-        console.log('More chars');
         errors.push({message: 'Password requires 3 or more characters.'});
     }
 
     if (errors.length > 0) {
-        console.log('Errors increase');
         response.render('signup', {
             errors: errors,
             username: username,
@@ -49,7 +46,6 @@ router.post('/signup', (request, response) => {
         })
     } else {
         User.findOne({ email: email }).exec((err, user) => {
-            console.log(user);
             if (user) {
                 errors.push({message: 'Email already exists.'});
                 render(response, errors, username, email, password, confirm_password);
@@ -65,11 +61,10 @@ router.post('/signup', (request, response) => {
                         newUser.password = hash;
                         newUser.save()
                         .then((value) => {
-                            console.log(value);
                             request.flash('success', 'You have successfully signed up.');
                             response.redirect('/users/login');
                     })
-                    .catch(value => console.log(value));
+                    .catch(value => console.error(value));
                 }));
             }
         })
