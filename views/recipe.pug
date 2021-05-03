@@ -3,13 +3,13 @@ extends layout
 block content
     h1 Add Recipe
 
-    form(action="/users/recipe" method='POST' enctype='multipart/form-data')
+    form(action="/profile/recipe" method='POST' enctype='multipart/form-data')
 
         label(for='recipe_title') Recipe Title
         input(type='text' name='recipe_title' id='recipe_title' value='' placeholder='Enter title' required)
 
         label(for='form__upload') 
-            input(id='form__upload' class='form__upload__bttn' type='file' accept='image/jpeg')
+            input(name='recipe_image' id='form__upload' class='form__upload__bttn' type='file' accept='image/jpeg')
         p(class='form__upload__text') Reccomended size: 1200 x 628
 
         label(for='description') Description
@@ -22,13 +22,13 @@ block content
         textarea(name='ingredients' id='ingredients' value='' placeholder='Add one ingredient per line.' required)
 
         label(for='prep_time') Preparation time
-        input(type='number' id='prep_time' value='' placeholder='0' required)
+        input(name='prep_time' type='number' id='prep_time' value='' placeholder='0' required)
 
         label(for='cook_time') Cook time
-        input(type='number' id='cook_time' value='' placeholder='0' required)
+        input(name='cook_time' type='number' id='cook_time' value='' placeholder='0' required)
 
-        label(for='servings') Cook time
-        input(type='number' id='servings' value='' placeholder='1' required)
+        label(for='servings') Servings
+        input(name='servings' type='number' id='servings' value='' placeholder='1' required)
 
         button(class='bttn bttn--blue' type='submit') SAVE RECIPE
         span.form__cancel__bttn
