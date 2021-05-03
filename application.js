@@ -7,6 +7,7 @@ const app = express()
 const passport = require('passport')
 const flash = require('connect-flash')
 const bodyParser = require('body-parser')
+const multer = require('multer')
 const mongoose = require('mongoose')
 
 
